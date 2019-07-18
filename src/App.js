@@ -10,14 +10,17 @@ class Counter extends Component {
     }
   }
   handlePlusButton = () => {
-    console.info('通過')
     this.setState({ count: this.state.count + 1 })
+  }
+  handleMinusButton = () => {
+    this.setState({ count: this.state.count -1 })
   }
   render() {
     return (
       <React.Fragment>
         <div>counter:{ this.state.count }</div>
         <button onClick={this.handlePlusButton}>count+1</button>
+        <button onClick={this.handleMinusButton}>count-1</button>
       </React.Fragment>
     )
   }
